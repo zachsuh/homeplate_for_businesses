@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { Linkedin, Instagram, Facebook, Twitter } from "lucide-react";
+import { Linkedin, Instagram, Facebook, X } from "lucide-react";
 import { useState } from "react";
 
 const cols = [
@@ -89,7 +89,7 @@ export default function Footer() {
             { Icon: Linkedin, label: "LinkedIn" },
             { Icon: Instagram, label: "Instagram" },
             { Icon: Facebook, label: "Facebook" },
-            { Icon: Twitter, label: "Twitter" },
+            { Icon: X, label: "Twitter" },
           ].map(({ Icon, label }) => (
             <motion.a
               key={label}
