@@ -1,16 +1,15 @@
 "use client";
 import { motion } from "framer-motion";
-import { useMemo } from "react";
 import { ArrowRight } from "lucide-react";
 
 const WORD = "NEW ";
+const CELLS = Array.from({ length: 200 }, (_, i) => ({
+  char: WORD[i % 4],
+  bright: (i * 13 + i % 5 * 7) % 10 > 4,
+}));
 
 export default function PilotStories() {
-  const cells = useMemo(() =>
-    Array.from({ length: 200 }, (_, i) => ({
-      char: WORD[i % 4],
-      bright: Math.random() > 0.55,
-    })), []);
+  const cells = CELLS;
 
   return (
     <section className="px-10 pb-16" id="pilot">

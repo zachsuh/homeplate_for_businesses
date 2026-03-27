@@ -1,7 +1,5 @@
 "use client";
 import { motion } from "framer-motion";
-import { useMemo } from "react";
-
 const streams = [
   {
     n: "1",
@@ -21,13 +19,14 @@ const streams = [
 ];
 
 const WORD = "HOMEPLATEHP";
+// Deterministic "bright" pattern — no Math.random() to avoid SSR/client hydration mismatch
+const LETTERS = Array.from({ length: 110 }, (_, i) => ({
+  char: WORD[i % WORD.length],
+  bright: (i * 7 + i % 3 * 11) % 10 > 5,
+}));
 
 export default function RevenueStreams() {
-  const letters = useMemo(() =>
-    Array.from({ length: 110 }, (_, i) => ({
-      char: WORD[i % WORD.length],
-      bright: Math.random() > 0.6,
-    })), []);
+  const letters = LETTERS;
 
   return (
     <section className="px-10 pb-20" id="streams">

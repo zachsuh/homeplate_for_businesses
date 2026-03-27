@@ -1,9 +1,10 @@
 "use client";
-import { useState, useMemo } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
 const WORD = "HOMEPLATEMEALS";
+const LETTERS = Array.from({ length: 380 }, (_, i) => WORD[i % WORD.length]);
 
 export default function CTA() {
   const [submitted, setSubmitted] = useState(false);
@@ -31,7 +32,7 @@ export default function CTA() {
           className="absolute inset-0 overflow-hidden pointer-events-none"
           style={{ display: "grid", gridTemplateColumns: "repeat(22, 1fr)", gap: "5px", padding: "14px", alignContent: "start" }}
         >
-          {letters.map((l, i) => (
+          {LETTERS.map((l, i) => (
             <span key={i} className="text-[10px] font-semibold text-white/10 select-none leading-[1.5]">
               {l}
             </span>
