@@ -5,11 +5,11 @@ import { ChevronLeft, ChevronRight, CalendarCheck, CreditCard, MessageSquare, Cl
 import Image from "next/image";
 
 const tabs = [
-  { id: "attendance", label: "Attendance",    icon: CalendarCheck,  src: "/dashboard/attendence.webp" },
-  { id: "billing",    label: "Billing",       icon: CreditCard,     src: "/dashboard/billing.webp" },
+  { id: "attendance",    label: "Attendance",    icon: CalendarCheck, src: "/dashboard/attendence.webp" },
+  { id: "billing",       label: "Billing",       icon: CreditCard,    src: "/dashboard/billing.webp" },
   { id: "communication", label: "Communication", icon: MessageSquare, src: "/dashboard/communication.webp" },
   { id: "registration",  label: "Registration",  icon: ClipboardList, src: "/dashboard/registration.webp" },
-  { id: "paperwork",     label: "Paperwork",      icon: FileText,      src: "/dashboard/paperwork.webp" },
+  { id: "paperwork",     label: "Paperwork",     icon: FileText,      src: "/dashboard/paperwork.webp" },
 ];
 
 export default function Hero() {
@@ -41,7 +41,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="text-[clamp(36px,5.5vw,68px)] font-black tracking-[-0.04em] leading-[1.06] text-[#18181B] mb-5"
+          className="font-[var(--font-poppins)] text-[clamp(36px,5.5vw,68px)] font-semibold tracking-[-0.02em] leading-[1.12] text-[#18181B] mb-5"
         >
           Medically tailored meal&nbsp;management{" "}
           <span className="text-[#E8470A]">senior centers love</span>
@@ -131,9 +131,8 @@ export default function Hero() {
         initial={{ opacity: 0, y: 24 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.65, delay: 0.45, ease: "easeOut" }}
-        className="mt-0 max-w-[1100px] mx-auto px-4 relative"
+        className="mt-8 max-w-[1100px] mx-auto px-4 relative"
       >
-        {/* Overflow clip so slides don't bleed outside */}
         <div className="relative overflow-hidden rounded-t-xl shadow-[0_8px_60px_rgba(0,0,0,0.13)]">
           <AnimatePresence mode="wait" custom={direction}>
             <motion.div
@@ -155,7 +154,7 @@ export default function Hero() {
             </motion.div>
           </AnimatePresence>
 
-          {/* Subtle bottom fade so the image blends into the white page */}
+          {/* Bottom fade */}
           <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent pointer-events-none" />
         </div>
       </motion.div>
