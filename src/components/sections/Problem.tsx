@@ -30,7 +30,7 @@ export default function Problem() {
         transition={{ duration: 0.65, ease: "easeOut" }}
       >
         <h2 className="text-[clamp(28px,3vw,44px)] font-normal tracking-[-0.02em] leading-[1.15] mb-4">
-          Senior Center Kitchens Are the Most Underused Asset in Senior Care
+          Extend your senior meal program beyond your facility.
         </h2>
         <p className="text-[16px] text-[#71717A] leading-[1.72] mb-7">
           Every day, your commercial kitchen sits idle between meal services. Your staff is trained,
@@ -54,9 +54,6 @@ export default function Problem() {
           >
             Get a Free Partnership Demo <ArrowRight size={14} />
           </motion.a>
-          <button className="text-[14px] font-medium text-[#3F3F46] hover:text-[#1A1A1A] transition-colors flex items-center gap-1.5 bg-transparent border-none cursor-pointer">
-            Learn more <ArrowRight size={14} />
-          </button>
         </div>
       </motion.div>
 

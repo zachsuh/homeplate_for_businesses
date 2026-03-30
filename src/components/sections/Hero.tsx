@@ -43,8 +43,7 @@ export default function Hero() {
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="font-[var(--font-poppins)] text-[clamp(36px,5.5vw,68px)] font-normal tracking-[-0.02em] leading-[1.12] text-[#1A1A1A] mb-5"
         >
-          Medically tailored meal&nbsp;management{" "}
-          <span className="text-[#1A1A1A]">senior centers love.</span>
+          Bring your senior meal program to seniors aging at home.
         </motion.h1>
 
         <motion.p
