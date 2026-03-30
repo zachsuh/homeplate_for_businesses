@@ -1,15 +1,13 @@
 "use client";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, FileText, Bell } from "lucide-react";
+import { FileText, Bell } from "lucide-react";
 
 export default function ROISection() {
   const [meals, setMeals] = useState(150);
   const [price, setPrice] = useState(14);
 
   const gross = Math.round(meals * price * 4.33);
-  const shareMin = Math.round(gross * 0.28);
-  const shareMax = Math.round(gross * 0.36);
 
   return (
     <section className="max-w-[1280px] mx-auto px-20 py-20 grid grid-cols-2 gap-20 items-center" id="roi">
@@ -20,23 +18,6 @@ export default function ROISection() {
         viewport={{ once: true, margin: "-60px" }}
         transition={{ duration: 0.65, ease: "easeOut" }}
       >
-        <h2 className="text-[clamp(26px,3vw,40px)] font-black tracking-[-0.045em] leading-[1.2] mb-4">
-          What Does Idle Kitchen<br />Time Actually Cost You?
-        </h2>
-        <p className="text-[15px] text-[#71717A] leading-[1.72] mb-7">
-          Your equipment depreciates. Your staff hours are fixed overhead. Your health permits renew
-          whether you use that capacity or not. The question isn't whether running a meal program
-          costs something — it's whether <em>not</em> running one costs more.
-        </p>
-        <motion.a
-          href="#apply"
-          whileHover={{ scale: 1.02 }}
-          whileTap={{ scale: 0.97 }}
-          className="inline-flex items-center gap-2 bg-[#183E34] text-white px-5 py-2.5 rounded-xl text-[14px] font-semibold no-underline mb-8 hover:bg-[#122D26] transition-colors"
-        >
-          Get Free Demo <ArrowRight size={14} />
-        </motion.a>
-
         {/* Calculator */}
         <div className="bg-white border border-[#E4E2DE] rounded-2xl p-6">
           <div className="flex items-center gap-2 text-[13px] font-semibold text-[#3F3F46] mb-5">
@@ -76,14 +57,6 @@ export default function ROISection() {
               ${gross.toLocaleString()}
             </div>
             <div className="text-[13px] text-[#71717A]">Monthly gross revenue</div>
-            <div className="mt-2 pt-2 border-t border-[#E4E2DE] text-[12px] text-[#71717A]">
-              Your estimated share:{" "}
-              <strong className="text-[#1A1A1A] text-[14px]">
-                ${shareMin.toLocaleString()}–${shareMax.toLocaleString()}
-              </strong>
-              <br />New hires required:{" "}
-              <strong className="text-[#1A1A1A]">0</strong>
-            </div>
           </motion.div>
         </div>
       </motion.div>

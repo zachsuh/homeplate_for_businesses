@@ -8,11 +8,35 @@ const LETTERS = Array.from({ length: 380 }, (_, i) => WORD[i % WORD.length]);
 
 export default function CTA() {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [form, setForm] = useState({ name: "", center: "", city: "", email: "", phone: "", capacity: "" });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          access_key: "f448bf69-0c43-4630-895d-40dffc7c1f46",
+          subject: "New Partnership Demo Request — HomePlate",
+          name: form.name,
+          email: form.email,
+          message: `Senior Center: ${form.center}\nCity: ${form.city}\nPhone: ${form.phone}\nPosition: ${form.capacity}`,
+        }),
+      });
+      const data = await res.json();
+      if (data.success) {
+        setSubmitted(true);
+      } else {
+        alert("Something went wrong. Please try again.");
+      }
+    } catch {
+      alert("Network error. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -90,39 +114,42 @@ export default function CTA() {
                 revenue projection for your location.
               </p>
 
-              <form onSubmit={handleSubmit} className="flex flex-wrap gap-2.5 justify-center mb-4">
-                {[
-                  { key: "center", placeholder: "Senior center name", required: true },
-                  { key: "city", placeholder: "City, State", required: false },
-                  { key: "name", placeholder: "Your name", required: true },
-                  { key: "email", placeholder: "Work email", required: true, type: "email" },
-                  { key: "phone", placeholder: "Phone number", required: false, type: "tel" },
-                  { key: "capacity", placeholder: "Kitchen capacity (meals/day)", required: false },
-                ].map((f) => (
-                  <input
-                    key={f.key}
-                    type={f.type || "text"}
-                    placeholder={f.placeholder}
-                    required={f.required}
-                    value={form[f.key as keyof typeof form]}
-                    onChange={(e) => setForm({ ...form, [f.key]: e.target.value })}
-                    className="border-none rounded-xl px-4 py-3 text-[14px] font-[inherit] outline-none w-[200px] bg-white/95 text-[#1A1A1A] placeholder:text-[#aaa] focus:ring-2 focus:ring-white/40"
-                  />
-                ))}
+              <form onSubmit={handleSubmit} className="flex flex-col items-center gap-4">
+                <div className="flex flex-wrap gap-2.5 justify-center">
+                  {[
+                    { key: "center", placeholder: "Senior center name", required: true },
+                    { key: "city", placeholder: "City, State", required: false },
+                    { key: "name", placeholder: "Your name", required: true },
+                    { key: "email", placeholder: "Work email", required: true, type: "email" },
+                    { key: "phone", placeholder: "Phone number", required: false, type: "tel" },
+                    { key: "capacity", placeholder: "Your position / title", required: false },
+                  ].map((f) => (
+                    <input
+                      key={f.key}
+                      type={f.type || "text"}
+                      placeholder={f.placeholder}
+                      required={f.required}
+                      value={form[f.key as keyof typeof form]}
+                      onChange={(e) => setForm({ ...form, [f.key]: e.target.value })}
+                      className="border-none rounded-xl px-4 py-3 text-[14px] font-[inherit] outline-none w-[200px] bg-white/95 text-[#1A1A1A] placeholder:text-[#aaa] focus:ring-2 focus:ring-white/40"
+                    />
+                  ))}
+                </div>
+
+                <motion.button
+                  whileHover={{ scale: 1.03 }}
+                  whileTap={{ scale: 0.97 }}
+                  type="submit"
+                  disabled={loading}
+                  className="inline-flex items-center gap-2 bg-white text-[#1A1A1A] rounded-xl px-7 py-3.5 text-[15px] font-bold cursor-pointer border-none hover:opacity-90 transition-opacity disabled:opacity-60"
+                >
+                  {loading ? "Sending…" : <> Apply for a Partnership Demo <ArrowRight size={15} /></>}
+                </motion.button>
+
+                <p className="text-[12.5px] text-white/60">
+                  No commitment required. We'll tell you honestly if it's a fit.
+                </p>
               </form>
-
-              <motion.button
-                whileHover={{ scale: 1.03 }}
-                whileTap={{ scale: 0.97 }}
-                onClick={handleSubmit}
-                className="inline-flex items-center gap-2 bg-white text-[#1A1A1A] rounded-xl px-7 py-3.5 text-[15px] font-bold cursor-pointer border-none hover:opacity-90 transition-opacity"
-              >
-                Apply for a Partnership Demo <ArrowRight size={15} />
-              </motion.button>
-
-              <p className="text-[12.5px] text-white/60 mt-4">
-                No commitment required. We'll tell you honestly if it's a fit.
-              </p>
             </>
           )}
         </div>

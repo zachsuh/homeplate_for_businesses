@@ -6,10 +6,6 @@ import Problem from "@/components/sections/Problem";
 import HowItWorks from "@/components/sections/HowItWorks";
 import WhatWeProvide from "@/components/sections/WhatWeProvide";
 import RevenueStreams from "@/components/sections/RevenueStreams";
-import ROISection from "@/components/sections/ROISection";
-import WhyNow from "@/components/sections/WhyNow";
-import Partners from "@/components/sections/Partners";
-import PilotStories from "@/components/sections/PilotStories";
 import FAQ from "@/components/sections/FAQ";
 import CTA from "@/components/sections/CTA";
 import Footer from "@/components/sections/Footer";
@@ -25,10 +21,6 @@ export default function Home() {
       <HowItWorks />
       <WhatWeProvide />
       <RevenueStreams />
-      <ROISection />
-      <WhyNow />
-      <Partners />
-      <PilotStories />
       <FAQ />
       <CTA />
       <Footer />

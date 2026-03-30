@@ -119,8 +119,9 @@ export default function HowItWorks() {
                 </h2>
 
                 {/* Black pill button */}
-                <button
-                  className="self-start bg-[#1A1A1A] text-white text-sm px-5 py-2.5 cursor-pointer border-none transition-opacity hover:opacity-80"
+                <a
+                  href="#apply"
+                  className="self-start bg-[#1A1A1A] text-white text-sm px-5 py-2.5 no-underline transition-opacity hover:opacity-80 inline-block"
                   style={{
                     fontFamily: "var(--font-poppins)",
                     fontWeight: 600,
@@ -128,7 +129,7 @@ export default function HowItWorks() {
                   }}
                 >
                   Learn more
-                </button>
+                </a>
               </div>
 
               {/* Right: image — full bleed */}

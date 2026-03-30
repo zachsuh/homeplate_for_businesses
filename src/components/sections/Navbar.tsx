@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown, ArrowRight, Users, BookOpen, Mic, Layers, Compass, Building2, Menu, X } from "lucide-react";
+import { ChevronDown, ArrowRight, BookOpen, Mic, Layers, Compass, Menu, X } from "lucide-react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 
@@ -12,12 +12,7 @@ const dropdowns: Record<string, { icon: React.ReactNode; label: string; href: st
     { icon: <Compass size={15} />, label: "Revenue Streams", href: "#streams" },
   ],
   Resources: [
-    { icon: <Users size={15} />, label: "Pilot Stories", href: "#pilot" },
     { icon: <Mic size={15} />, label: "FAQ", href: "#faq" },
-  ],
-  Company: [
-    { icon: <Building2 size={15} />, label: "About Us", href: "#" },
-    { icon: <Users size={15} />, label: "Careers", href: "#" },
   ],
 };
 
@@ -100,22 +95,10 @@ export default function Navbar() {
                 </AnimatePresence>
               </div>
             ))}
-            {["Pricing", "Partners"].map((item) => (
-              <a
-                key={item}
-                href={`#${item.toLowerCase()}`}
-                className="px-3 py-1.5 rounded-lg text-[14px] font-medium text-[#3F3F46] hover:bg-black/5 transition-colors no-underline"
-              >
-                {item}
-              </a>
-            ))}
           </div>
         </div>
 
         <div className="flex items-center gap-2.5">
-          <button className="hidden sm:block text-[14px] font-medium text-[#3F3F46] hover:bg-black/5 px-3 py-1.5 rounded-lg transition-colors">
-            Login
-          </button>
           <motion.a
             href="#apply"
             whileHover={{ scale: 1.02 }}

@@ -64,9 +64,9 @@ export default function Hero() {
           transition={{ duration: 0.55, delay: 0.25, ease: "easeOut" }}
           className="flex items-center justify-center mb-5"
         >
-          <button className="bg-[#183E34] hover:bg-[#122D26] transition-colors text-white font-semibold text-[15px] px-7 py-3.5 rounded-xl shadow-sm cursor-pointer">
+          <a href="#apply" className="bg-[#183E34] hover:bg-[#122D26] transition-colors text-white font-semibold text-[15px] px-7 py-3.5 rounded-xl shadow-sm cursor-pointer no-underline inline-block">
             Get a free demo
-          </button>
+          </a>
         </motion.div>
       </div>
 
