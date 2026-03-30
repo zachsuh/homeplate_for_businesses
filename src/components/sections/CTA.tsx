@@ -26,7 +26,7 @@ export default function CTA() {
           subject: "New Partnership Demo Request — HomePlate",
           name: form.name,
           email: form.email,
-          message: `Senior Center: ${form.center}\nCity: ${form.city}\nPhone: ${form.phone}\nPosition: ${form.capacity}`,
+          message: `Senior Center: ${form.center}`,
         }),
       });
       const data = await res.json();
