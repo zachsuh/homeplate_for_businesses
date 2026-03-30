@@ -54,8 +54,8 @@ export default function CTA() {
 
         {/* Headline */}
         <div className="relative z-10 text-center px-8 pt-14 pb-8">
-          <h2 className="text-[clamp(26px,4vw,48px)] font-black text-white tracking-[-0.045em] leading-[1.12] mb-3">
-            Let's Find Out If Your<br />Kitchen Qualifies
+          <h2 className="text-[clamp(28px,3vw,44px)] font-normal text-white tracking-[-0.02em] leading-[1.15] mb-3">
+            Let's Find Out If Your Kitchen Qualifies
           </h2>
           <p className="text-[15px] text-white/70 leading-[1.65] max-w-[440px] mx-auto">
             The assessment is free, takes under an hour, and you'll leave with a custom

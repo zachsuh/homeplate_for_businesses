@@ -1,13 +1,12 @@
 "use client";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown, ArrowRight, BookOpen, Mic, Layers, Compass, Menu, X } from "lucide-react";
+import { ChevronDown, ArrowRight, BookOpen, Mic, Compass, Menu, X } from "lucide-react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 const dropdowns: Record<string, { icon: React.ReactNode; label: string; href: string }[]> = {
   Program: [
-    { icon: <Layers size={15} />, label: "How It Works", href: "#how" },
     { icon: <BookOpen size={15} />, label: "What's Included", href: "#provide" },
     { icon: <Compass size={15} />, label: "Revenue Streams", href: "#streams" },
   ],
