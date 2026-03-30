@@ -195,7 +195,7 @@ const CARDS = [
 
 export default function WhatWeProvide() {
   return (
-    <section className="px-20 py-24" id="provide">
+    <section className="px-4 sm:px-10 lg:px-20 py-12 sm:py-16 lg:py-24" id="provide">
 
       {/* Header */}
       <motion.div
@@ -203,13 +203,13 @@ export default function WhatWeProvide() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-60px" }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className="mb-14"
+        className="mb-8 sm:mb-14"
       >
         <p className="text-[11px] font-semibold tracking-[0.14em] uppercase text-[#183E34] mb-4">
           What We Provide
         </p>
-        <div className="grid grid-cols-2 gap-10 items-end">
-          <h2 className="text-[clamp(26px,3vw,42px)] font-normal tracking-[-0.03em] leading-[1.18] text-[#1A1A1A]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-10 items-end">
+          <h2 className="text-[clamp(24px,3vw,42px)] font-normal tracking-[-0.03em] leading-[1.18] text-[#1A1A1A]">
             Everything a senior center needs to run a meal program.
           </h2>
           <p className="text-[15px] text-[#71717A] leading-[1.75]">
@@ -219,7 +219,7 @@ export default function WhatWeProvide() {
       </motion.div>
 
       {/* Cards */}
-      <div className="grid grid-cols-3 gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
         {CARDS.map((c, i) => {
           const { Graphic } = c;
           return (

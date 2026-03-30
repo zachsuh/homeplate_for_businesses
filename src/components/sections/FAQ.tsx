@@ -5,24 +5,36 @@ import { ChevronDown } from "lucide-react";
 
 const faqs = [
   {
-    q: "What is HomePlate and how does it help my senior center?",
-    a: "HomePlate is a turnkey medical meal program for senior center kitchens. We provide everything needed to launch a medically-tailored meal service using your existing staff and equipment — including menus, software, training, and done-for-you marketing. You earn revenue from every meal sold without adding staff or managing the complexity yourself.",
+    q: "What is HomePlate?",
+    a: "HomePlate helps senior living kitchens turn unused capacity into medically tailored meal production for seniors living at home.",
   },
   {
-    q: "How quickly can we set up the HomePlate program?",
-    a: "Most partner kitchens are ready to take their first orders within two weeks. Our onboarding includes a kitchen assessment, compliance confirmation, software setup, and staff training — all handled by our team on your timeline. We do not require any construction, equipment upgrades, or new hires to get started.",
+    q: "Who is it for?",
+    a: "Senior living communities, assisted living kitchens, and healthcare food service teams with existing staff and kitchen space.",
   },
   {
-    q: "Does HomePlate work with our current kitchen setup and certifications?",
-    a: "Yes. If your kitchen already holds a valid commercial food service permit, we can typically build on your existing certifications. Our onboarding team reviews your current health permits and HACCP compliance, then identifies any gaps we need to address before launch. Most certified senior center kitchens qualify without additional licensing.",
+    q: "Do we need to change our setup?",
+    a: "No. HomePlate is designed to fit into your current kitchen operations with minimal changes.",
   },
   {
-    q: "Can HomePlate handle both residents and community seniors?",
-    a: "Absolutely. HomePlate is designed to serve three distinct customer groups from a single kitchen: your on-site residents with chronic conditions, independent seniors in the surrounding community, and insurance-referred patients through Medicare Advantage and managed care partnerships.",
+    q: "Where do recipes come from?",
+    a: "Our R&D team works with dietitians, chefs, and senior care partners to develop practical, nutritious meals.",
   },
   {
-    q: "What are the costs and how does the revenue share work?",
-    a: "There are no per-meal fees to HomePlate. Partners pay a flat program fee that covers onboarding, software, training, and marketing support. You keep a significant percentage of every meal sold — actual figures depend on your location, meal volume, and insurance mix. Our team builds a custom revenue projection during your free assessment call.",
+    q: "Do you integrate with our existing systems?",
+    a: "Yes. We integrate with POS systems like Toast and Square, plus inventory tools and USDA nutrition databases. HomePlate works alongside your existing systems without disruption.",
+  },
+  {
+    q: "Do we need technical staff?",
+    a: "No. The platform is built for chefs and operators — no technical background required.",
+  },
+  {
+    q: "Who handles delivery?",
+    a: "We coordinate delivery through third-party logistics partners integrated into your workflow. You set your delivery range, and we help optimize based on cost and demand.",
+  },
+  {
+    q: "How does the revenue split work?",
+    a: "It's flexible and customized based on volume and level of support. Our team builds a custom revenue projection during your free assessment.",
   },
 ];
 
@@ -30,7 +42,7 @@ export default function FAQ() {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
-    <section className="max-w-[800px] mx-auto px-10 py-20" id="faq">
+    <section className="max-w-[800px] mx-auto px-4 sm:px-8 py-12 sm:py-16 lg:py-20" id="faq">
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}

@@ -86,17 +86,19 @@ export default function HowItWorks() {
             }}
           >
             <div
-              className="absolute rounded-[22px] overflow-hidden shadow-[0_12px_56px_rgba(0,0,0,0.13)] grid grid-cols-2 bg-white"
+              className="absolute rounded-[22px] overflow-hidden shadow-[0_12px_56px_rgba(0,0,0,0.13)] bg-white"
               style={{
                 top: "47%",
                 left: "50%",
                 transform: "translate(-50%, -50%)",
-                width: "min(920px, calc(100vw - 80px))",
+                width: "min(920px, calc(100vw - 32px))",
                 aspectRatio: "4 / 2.25",
+                display: "grid",
+                gridTemplateColumns: "1fr 1fr",
               }}
             >
               {/* Left: text panel */}
-              <div className="flex flex-col justify-between px-11 py-10">
+              <div className="flex flex-col justify-between px-6 py-6 sm:px-11 sm:py-10">
 
                 {/* Step counter + label */}
                 <div className="flex items-center gap-1.5 text-sm font-normal" style={{ fontFamily: "var(--font-poppins)" }}>

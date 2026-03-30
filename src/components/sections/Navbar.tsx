@@ -39,7 +39,7 @@ export default function Navbar() {
           : "bg-[rgba(245,243,239,0.85)] backdrop-blur-md border-b border-[#E4E2DE]"
       )}
     >
-      <div className="max-w-[1280px] mx-auto px-8 h-16 flex items-center justify-between">
+      <div className="max-w-[1280px] mx-auto px-4 sm:px-8 h-16 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center gap-8">
           <a href="#" className="flex items-center no-underline">
@@ -127,10 +127,7 @@ export default function Navbar() {
             className="lg:hidden border-t border-[#E4E2DE] bg-[#F5F3EF] overflow-hidden"
           >
             <div className="px-6 py-4 flex flex-col gap-1">
-              {[...Object.keys(dropdowns).flatMap((k) => dropdowns[k]),
-                { label: "Pricing", href: "#roi" },
-                { label: "Partners", href: "#partner" }
-              ].map((item) => (
+              {Object.keys(dropdowns).flatMap((k) => dropdowns[k]).map((item) => (
                 <a
                   key={item.label}
                   href={item.href}

@@ -21,7 +21,7 @@ const item = {
 
 export default function Problem() {
   return (
-    <section className="max-w-[1280px] mx-auto px-20 py-28 grid grid-cols-2 gap-20 items-center">
+    <section className="max-w-[1280px] mx-auto px-4 sm:px-10 lg:px-20 py-12 sm:py-16 lg:py-28 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
       {/* Text */}
       <motion.div
         initial={{ opacity: 0, y: 28 }}
@@ -29,7 +29,7 @@ export default function Problem() {
         viewport={{ once: true, margin: "-60px" }}
         transition={{ duration: 0.65, ease: "easeOut" }}
       >
-        <h2 className="text-[clamp(28px,3vw,44px)] font-black tracking-[-0.045em] leading-[1.15] mb-4">
+        <h2 className="text-[clamp(28px,3vw,44px)] font-normal tracking-[-0.02em] leading-[1.15] mb-4">
           Senior Center Kitchens Are the Most Underused Asset in Senior Care
         </h2>
         <p className="text-[16px] text-[#71717A] leading-[1.72] mb-7">
@@ -69,7 +69,7 @@ export default function Problem() {
         className="flex items-center justify-center"
       >
         <Image
-          src="/images/customergraphic.png"
+          src="/images/dashboard/customergraphic.png"
           alt="Customer order management"
           width={500}
           height={600}

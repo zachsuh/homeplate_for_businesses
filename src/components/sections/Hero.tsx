@@ -1,15 +1,15 @@
 "use client";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import { ChevronLeft, ChevronRight, CalendarCheck, CreditCard, MessageSquare, ClipboardList, FileText } from "lucide-react";
+import { ChevronLeft, ChevronRight, CreditCard, Truck, BarChart2, ClipboardList, UtensilsCrossed } from "lucide-react";
 import Image from "next/image";
 
 const tabs = [
-  { id: "attendance",    label: "Attendance",    icon: CalendarCheck, src: "/dashboard/attendence.webp" },
-  { id: "billing",       label: "Billing",       icon: CreditCard,    src: "/dashboard/billing.webp" },
-  { id: "communication", label: "Communication", icon: MessageSquare, src: "/dashboard/communication.webp" },
-  { id: "registration",  label: "Registration",  icon: ClipboardList, src: "/dashboard/registration.webp" },
-  { id: "paperwork",     label: "Paperwork",     icon: FileText,      src: "/dashboard/paperwork.webp" },
+  { id: "billing",   label: "Billing",   icon: CreditCard,      src: "/images/dashboard/Billing.png" },
+  { id: "delivery",  label: "Delivery",  icon: Truck,           src: "/images/dashboard/Delivery.png" },
+  { id: "forecasts", label: "Forecasts", icon: BarChart2,       src: "/images/dashboard/Forecasts.png" },
+  { id: "orders",    label: "Orders",    icon: ClipboardList,   src: "/images/dashboard/Orders.png" },
+  { id: "recipes",   label: "Recipes",   icon: UtensilsCrossed, src: "/images/dashboard/Recipes.png" },
 ];
 
 export default function Hero() {
@@ -44,7 +44,7 @@ export default function Hero() {
           className="font-[var(--font-poppins)] text-[clamp(36px,5.5vw,68px)] font-normal tracking-[-0.02em] leading-[1.12] text-[#1A1A1A] mb-5"
         >
           Medically tailored meal&nbsp;management{" "}
-          <span className="text-[#1A1A1A]">senior centers love</span>
+          <span className="text-[#1A1A1A]">senior centers love.</span>
         </motion.h1>
 
         <motion.p
@@ -53,8 +53,7 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.15, ease: "easeOut" }}
           className="text-[17px] text-[#52525B] max-w-[520px] mx-auto mb-7 leading-[1.65]"
         >
-          Everything your senior center needs to run a medically tailored meal
-          program — menus, software, billing, and compliance in one place.
+          Break into the at-home care industry. HomePlate gives senior centers the software, systems, and support to launch their own medically tailored meal delivery program — no new infrastructure required.
         </motion.p>
 
         {/* CTA */}

@@ -3,7 +3,7 @@ import Navbar from "@/components/sections/Navbar";
 import Hero from "@/components/sections/Hero";
 import MarqueeSection from "@/components/sections/MarqueeSection";
 import Problem from "@/components/sections/Problem";
-import HowItWorks from "@/components/sections/HowItWorks";
+// import HowItWorks from "@/components/sections/HowItWorks";
 import WhatWeProvide from "@/components/sections/WhatWeProvide";
 import RevenueStreams from "@/components/sections/RevenueStreams";
 import FAQ from "@/components/sections/FAQ";
@@ -18,11 +18,11 @@ export default function Home() {
       <Hero />
       <MarqueeSection />
       <Problem />
-      <HowItWorks />
+      {/* <HowItWorks /> */}
       <WhatWeProvide />
       <RevenueStreams />
-      <FAQ />
       <CTA />
+      <FAQ />
       <Footer />
     </main>
   );

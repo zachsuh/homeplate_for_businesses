@@ -37,12 +37,12 @@ export default function Footer() {
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
-      className="bg-white border-t border-[#E4E2DE] px-20 pt-14 pb-10"
+      className="bg-white border-t border-[#E4E2DE] px-4 sm:px-10 lg:px-20 pt-10 sm:pt-14 pb-8 sm:pb-10"
     >
       <div className="flex flex-col gap-10">
 
         {/* Top row */}
-        <div className="flex items-start justify-between gap-16">
+        <div className="flex flex-col sm:flex-row items-start justify-between gap-8 sm:gap-12 lg:gap-16">
 
           {/* Logo + tagline */}
           <div className="flex flex-col gap-4 max-w-[260px]">
@@ -70,7 +70,7 @@ export default function Footer() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
-                    className="border border-[#E4E2DE] rounded-lg px-3.5 py-2 text-[13px] font-[inherit] outline-none w-[170px] bg-[#F7F5F2] text-[#1A1A1A] placeholder:text-[#71717A] focus:border-[#183E34] transition-colors"
+                    className="border border-[#E4E2DE] rounded-lg px-3.5 py-2 text-[13px] font-[inherit] outline-none w-full sm:w-[170px] bg-[#F7F5F2] text-[#1A1A1A] placeholder:text-[#71717A] focus:border-[#183E34] transition-colors"
                   />
                   <button type="submit" className="bg-[#183E34] text-white border-none rounded-lg px-4 py-2 text-[13px] font-semibold cursor-pointer hover:bg-[#122D26] transition-colors">
                     Go
