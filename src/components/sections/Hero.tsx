@@ -41,10 +41,10 @@ export default function Hero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="font-[var(--font-poppins)] text-[clamp(36px,5.5vw,68px)] font-semibold tracking-[-0.02em] leading-[1.12] text-[#18181B] mb-5"
+          className="font-[var(--font-poppins)] text-[clamp(36px,5.5vw,68px)] font-normal tracking-[-0.02em] leading-[1.12] text-[#1A1A1A] mb-5"
         >
           Medically tailored meal&nbsp;management{" "}
-          <span className="text-[#E8470A]">senior centers love</span>
+          <span className="text-[#1A1A1A]">senior centers love</span>
         </motion.h1>
 
         <motion.p
@@ -64,7 +64,7 @@ export default function Hero() {
           transition={{ duration: 0.55, delay: 0.25, ease: "easeOut" }}
           className="flex items-center justify-center mb-5"
         >
-          <button className="bg-[#E8470A] hover:bg-[#C73D08] transition-colors text-white font-semibold text-[15px] px-7 py-3.5 rounded-xl shadow-sm cursor-pointer">
+          <button className="bg-[#183E34] hover:bg-[#122D26] transition-colors text-white font-semibold text-[15px] px-7 py-3.5 rounded-xl shadow-sm cursor-pointer">
             Get a free demo
           </button>
         </motion.div>
@@ -106,7 +106,7 @@ export default function Hero() {
                 )}
                 <span
                   className={`relative flex items-center gap-1.5 px-4 py-2 rounded-full text-[13.5px] font-semibold whitespace-nowrap transition-colors
-                    ${active ? "text-[#2563EB]" : "text-[#A8A29E] hover:text-[#78716C]"}`}
+                    ${active ? "text-[#1A1A1A]" : "text-[#A8A29E] hover:text-[#78716C]"}`}
                 >
                   <Icon size={14} strokeWidth={2.2} />
                   {tab.label}

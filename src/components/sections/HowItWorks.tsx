@@ -1,94 +1,150 @@
 "use client";
-import { motion } from "framer-motion";
+import { useRef } from "react";
+import { useScroll, useTransform, motion } from "framer-motion";
+import Image from "next/image";
 
-const steps = [
+const TOTAL = 4;
+
+const cards = [
   {
-    n: "1",
-    title: "Onboard",
+    n: "01",
+    label: "Onboard",
+    title: "We Set Up\nEverything.",
     desc: "We assess your kitchen, confirm compliance, and configure your HomePlate ordering portal. Most partners are ready within two weeks.",
+    image: "/images/how%20it%20works/A%20backend%20that%20builds%20with%20you%20-%20Desktop.avif",
   },
   {
-    n: "2",
-    title: "Train",
-    desc: "Our team trains your kitchen staff on medical dietary protocols — diabetes, heart disease, renal, and dysphagia-specific menus. No dietitian required.",
+    n: "02",
+    label: "Train",
+    title: "Your Team Learns.\nNo Dietitian\nRequired.",
+    desc: "Our team trains your kitchen staff on medical dietary protocols — diabetes, heart disease, renal, and dysphagia-specific menus.",
+    image: "/images/how%20it%20works/Create%20at%20the%20speed%20of%20thought%20-%20Desktop.avif",
   },
   {
-    n: "3",
-    title: "Launch",
+    n: "03",
+    label: "Launch",
+    title: "We Market.\nOrders Come\nTo You.",
     desc: "We run your local marketing — digital ads, physician referrals, and community outreach — to drive orders directly to your location.",
+    image: "/images/how%20it%20works/One%20platform_%20Any%20agent%20-%20Desktop.avif",
   },
   {
-    n: "4",
-    title: "Earn",
+    n: "04",
+    label: "Earn",
+    title: "Revenue From\nCapacity You\nAlready Have.",
     desc: "You keep a cut of every meal sold. The more your community orders, the more you make — with no per-meal fees to HomePlate.",
+    image: "/images/how%20it%20works/Ready%20to%20use%2C%20instantly%20-%20Desktop.avif",
   },
 ];
 
 export default function HowItWorks() {
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end end"],
+  });
+
+  const ease = (t: number) => 1 - Math.pow(1 - t, 3);
+  const y1 = useTransform(scrollYProgress, [0.18, 0.36], ["100%", "0%"], { ease });
+  const y2 = useTransform(scrollYProgress, [0.42, 0.60], ["100%", "0%"], { ease });
+  const y3 = useTransform(scrollYProgress, [0.66, 0.84], ["100%", "0%"], { ease });
+  const ys = [undefined, y1, y2, y3];
+
   return (
-    <section className="px-10 pb-20" id="how">
-      <motion.div
-        initial={{ opacity: 0, y: 32 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-60px" }}
-        transition={{ duration: 0.7, ease: "easeOut" }}
-        className="bg-[#E8470A] rounded-[20px] overflow-hidden px-16 py-16 relative noise"
+    <section
+      ref={containerRef}
+      style={{ height: "500vh" }}
+      className="relative"
+      id="how"
+    >
+      <div className="sticky top-0 h-screen overflow-hidden"
+        style={{ background: "linear-gradient(to bottom, #f4faf7 0%, #ffffff 40%)" }}
       >
-        {/* Background decorative lines */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-10">
-          {[...Array(8)].map((_, i) => (
-            <div key={i} className="absolute w-full h-px bg-white" style={{ top: `${12 + i * 12}%` }} />
-          ))}
+
+        {/* Bottom green glow — radial, soft fade */}
+        <div
+          className="absolute bottom-0 left-0 right-0 h-[320px] pointer-events-none z-0"
+          style={{
+            background:
+              "radial-gradient(ellipse 65% 100% at 50% 100%, rgba(24,62,52,0.10) 0%, rgba(24,62,52,0.03) 60%, transparent 100%)",
+          }}
+        />
+
+        {/* Section label */}
+        <div className="absolute top-7 left-1/2 -translate-x-1/2 z-50 text-[11px] font-semibold tracking-[0.14em] uppercase text-[#71717A] select-none">
+          How It Works
         </div>
 
-        <h2 className="text-[clamp(26px,3.5vw,44px)] font-black text-white tracking-[-0.045em] leading-[1.1] mb-3 relative z-10">
-          Behind Every Meal.<br />How HomePlate Works.
-        </h2>
-        <p className="text-[16px] text-white/70 mb-12 relative z-10">
-          From kitchen assessment to your first paying order — in as little as two weeks.
-        </p>
-
-        <div className="grid grid-cols-4 gap-5 relative z-10">
-          {/* Connector line */}
-          <div className="absolute top-[27px] left-[12.5%] right-[12.5%] h-px bg-white/20 hidden lg:block" />
-
-          {steps.map((step, i) => (
-            <motion.div
-              key={step.n}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-40px" }}
-              transition={{ duration: 0.55, delay: i * 0.1, ease: "easeOut" }}
-              whileHover={{ y: -4 }}
-              className="bg-white/12 border border-white/20 rounded-2xl p-7 backdrop-blur-sm relative"
+        {cards.map((card, i) => (
+          <motion.div
+            key={card.n}
+            style={{
+              y: ys[i],
+              zIndex: i + 1,
+              position: "absolute",
+              inset: 0,
+            }}
+          >
+            <div
+              className="absolute rounded-[22px] overflow-hidden shadow-[0_12px_56px_rgba(0,0,0,0.13)] grid grid-cols-2 bg-white"
+              style={{
+                top: "47%",
+                left: "50%",
+                transform: "translate(-50%, -50%)",
+                width: "min(920px, calc(100vw - 80px))",
+                aspectRatio: "4 / 2.25",
+              }}
             >
-              <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-[14px] font-black text-[#E8470A] mb-4 shadow-md">
-                {step.n}
-              </div>
-              <h3 className="text-[16px] font-bold text-white mb-2">{step.title}</h3>
-              <p className="text-[13px] text-white/70 leading-[1.62]">{step.desc}</p>
-            </motion.div>
-          ))}
-        </div>
+              {/* Left: text panel */}
+              <div className="flex flex-col justify-between px-11 py-10">
 
-        {/* Decorative illustrations */}
-        <svg className="absolute bottom-0 left-4 opacity-40 pointer-events-none" width="120" height="100" viewBox="0 0 140 120" fill="none">
-          <rect x="10" y="20" width="100" height="80" rx="4" stroke="rgba(255,255,255,0.35)" strokeWidth="1.5"/>
-          <rect x="22" y="32" width="30" height="30" rx="2" stroke="rgba(255,255,255,0.25)" strokeWidth="1"/>
-          <path d="M6 10 L70 2 L134 10" stroke="rgba(255,255,255,0.2)" strokeWidth="1.5"/>
-          <circle cx="70" cy="2" r="3" fill="rgba(255,255,255,0.45)"/>
-          <circle cx="10" cy="20" r="3" fill="rgba(255,255,255,0.45)"/>
-        </svg>
-        <svg className="absolute bottom-0 right-4 opacity-40 pointer-events-none" width="120" height="110" viewBox="0 0 140 120" fill="none">
-          <circle cx="70" cy="55" r="45" stroke="rgba(255,255,255,0.2)" strokeWidth="1.5" strokeDasharray="4 3"/>
-          <circle cx="70" cy="55" r="28" stroke="rgba(255,255,255,0.2)" strokeWidth="1"/>
-          <circle cx="70" cy="55" r="12" fill="rgba(255,255,255,0.1)"/>
-          <circle cx="42" cy="35" r="4" fill="rgba(255,255,255,0.5)"/>
-          <circle cx="98" cy="35" r="4" fill="rgba(255,255,255,0.5)"/>
-          <circle cx="70" cy="20" r="4" fill="rgba(255,255,255,0.5)"/>
-          <circle cx="98" cy="75" r="4" fill="rgba(255,255,255,0.5)"/>
-        </svg>
-      </motion.div>
+                {/* Step counter + label */}
+                <div className="flex items-center gap-1.5 text-sm font-normal" style={{ fontFamily: "var(--font-poppins)" }}>
+                  <span className="text-[#1A1A1A]">{card.n}</span>
+                  <span className="text-[#BBBBBB]">/ 0{TOTAL}</span>
+                  <span className="text-[#1A1A1A] ml-1">{card.label}</span>
+                </div>
+
+                {/* Large headline */}
+                <h2
+                  className="text-[#1A1A1A] leading-[1.08] tracking-[-0.03em]"
+                  style={{
+                    fontFamily: "var(--font-poppins)",
+                    fontSize: "clamp(22px, 2.6vw, 38px)",
+                    whiteSpace: "pre-line",
+                    fontWeight: 400,
+                  }}
+                >
+                  {card.title}
+                </h2>
+
+                {/* Black pill button */}
+                <button
+                  className="self-start bg-[#1A1A1A] text-white text-sm px-5 py-2.5 cursor-pointer border-none transition-opacity hover:opacity-80"
+                  style={{
+                    fontFamily: "var(--font-poppins)",
+                    fontWeight: 600,
+                    borderRadius: 9999,
+                  }}
+                >
+                  Learn more
+                </button>
+              </div>
+
+              {/* Right: image — full bleed */}
+              <div className="relative">
+                <Image
+                  src={card.image}
+                  alt={card.label}
+                  fill
+                  className="object-cover"
+                  sizes="40vw"
+                />
+              </div>
+            </div>
+          </motion.div>
+        ))}
+      </div>
     </section>
   );
 }

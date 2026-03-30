@@ -2,7 +2,6 @@ import AnnouncementBar from "@/components/sections/AnnouncementBar";
 import Navbar from "@/components/sections/Navbar";
 import Hero from "@/components/sections/Hero";
 import MarqueeSection from "@/components/sections/MarqueeSection";
-import Testimonials from "@/components/sections/Testimonials";
 import Problem from "@/components/sections/Problem";
 import HowItWorks from "@/components/sections/HowItWorks";
 import WhatWeProvide from "@/components/sections/WhatWeProvide";
@@ -22,7 +21,6 @@ export default function Home() {
       <Navbar />
       <Hero />
       <MarqueeSection />
-      <Testimonials />
       <Problem />
       <HowItWorks />
       <WhatWeProvide />

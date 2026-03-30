@@ -28,7 +28,7 @@ export default function WhyNow() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-60px" }}
         transition={{ duration: 0.7, ease: "easeOut" }}
-        className="bg-[#18181B] rounded-[20px] p-14"
+        className="bg-[#183E34] rounded-[20px] p-14"
       >
         <h2 className="text-[clamp(22px,2.8vw,34px)] font-black text-white tracking-[-0.04em] mb-4">
           The Timing Has Never Been Better
@@ -51,7 +51,7 @@ export default function WhyNow() {
               whileHover={{ y: -4 }}
               className="bg-white/[0.05] border border-white/[0.08] rounded-2xl p-6"
             >
-              <div className="w-9 h-9 bg-orange-500/20 rounded-xl flex items-center justify-center text-[#E8470A] mb-5">
+              <div className="w-9 h-9 bg-[#EDF4F0]0/20 rounded-xl flex items-center justify-center text-[#1A1A1A] mb-5">
                 {f.icon}
               </div>
               <h3 className="text-[15px] font-semibold text-white mb-2">{f.title}</h3>

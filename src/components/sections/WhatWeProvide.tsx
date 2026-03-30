@@ -68,10 +68,10 @@ export default function WhatWeProvide() {
             whileHover={{ y: -4, boxShadow: "0 12px 40px rgba(0,0,0,0.08)" }}
             className="bg-white border border-[#E4E2DE] rounded-2xl p-7 cursor-default transition-shadow"
           >
-            <div className="w-10 h-10 bg-orange-50 rounded-xl flex items-center justify-center text-[#E8470A] mb-5">
+            <div className="w-10 h-10 bg-[#EDF4F0] rounded-xl flex items-center justify-center text-[#1A1A1A] mb-5">
               {c.icon}
             </div>
-            <h3 className="text-[16px] font-bold text-[#18181B] mb-2">{c.title}</h3>
+            <h3 className="text-[16px] font-bold text-[#1A1A1A] mb-2">{c.title}</h3>
             <p className="text-[14px] text-[#71717A] leading-[1.67]">{c.desc}</p>
           </motion.div>
         ))}

@@ -22,7 +22,7 @@ export default function CTA() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-60px" }}
         transition={{ duration: 0.7, ease: "easeOut" }}
-        className="bg-[#E8470A] rounded-[20px] overflow-hidden relative min-h-[440px] flex flex-col items-center justify-center text-center px-10 py-20 noise"
+        className="bg-[#183E34] rounded-[20px] overflow-hidden relative min-h-[440px] flex flex-col items-center justify-center text-center px-10 py-20 noise"
       >
         {/* Letter bg */}
         <div
@@ -106,7 +106,7 @@ export default function CTA() {
                     required={f.required}
                     value={form[f.key as keyof typeof form]}
                     onChange={(e) => setForm({ ...form, [f.key]: e.target.value })}
-                    className="border-none rounded-xl px-4 py-3 text-[14px] font-[inherit] outline-none w-[200px] bg-white/95 text-[#18181B] placeholder:text-[#aaa] focus:ring-2 focus:ring-white/40"
+                    className="border-none rounded-xl px-4 py-3 text-[14px] font-[inherit] outline-none w-[200px] bg-white/95 text-[#1A1A1A] placeholder:text-[#aaa] focus:ring-2 focus:ring-white/40"
                   />
                 ))}
               </form>
@@ -115,7 +115,7 @@ export default function CTA() {
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
                 onClick={handleSubmit}
-                className="inline-flex items-center gap-2 bg-white text-[#E8470A] rounded-xl px-7 py-3.5 text-[15px] font-bold cursor-pointer border-none hover:opacity-90 transition-opacity"
+                className="inline-flex items-center gap-2 bg-white text-[#1A1A1A] rounded-xl px-7 py-3.5 text-[15px] font-bold cursor-pointer border-none hover:opacity-90 transition-opacity"
               >
                 Apply for a Partnership Demo <ArrowRight size={15} />
               </motion.button>

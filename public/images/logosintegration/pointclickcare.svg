@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 48" width="220" height="48">
+  <circle cx="12" cy="24" r="9" fill="#0072CE" opacity="0.85"/>
+  <circle cx="12" cy="24" r="4.5" fill="white"/>
+  <text x="28" y="29" font-family="'Arial', sans-serif" font-size="15" font-weight="700" fill="#1A1A2E" letter-spacing="-0.3">PointClickCare</text>
+</svg>

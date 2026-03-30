@@ -35,7 +35,7 @@ export default function RevenueStreams() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-60px" }}
         transition={{ duration: 0.7, ease: "easeOut" }}
-        className="bg-[#E8470A] rounded-[20px] overflow-hidden px-16 py-16 grid grid-cols-2 gap-16 items-center min-h-[460px] relative"
+        className="bg-[#183E34] rounded-[20px] overflow-hidden px-16 py-16 grid grid-cols-2 gap-16 items-center min-h-[460px] relative"
       >
         {/* Left text */}
         <div>

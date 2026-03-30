@@ -5,12 +5,13 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --orange: #E8470A;
-  --orange-dark: #C73D08;
-  --orange-light: #FF6B35;
-  --bg: #EDEBE6;
+  --orange: #183E34;
+  --orange-dark: #122D26;
+  --orange-light: #1F5045;
+  --green: #6CC827;
+  --bg: #ffffff;
   --bg-white: #F5F3EF;
-  --dark: #18181B;
+  --dark: #1A1A1A;
   --text: #3F3F46;
   --muted: oklch(0.97 0 0);
   --border: oklch(0.922 0 0);
@@ -60,7 +61,7 @@ body {
 }
 
 ::selection {
-  background: rgba(232, 71, 10, 0.18);
+  background: rgba(24, 62, 52, 0.18);
   color: var(--dark);
 }
 
@@ -86,7 +87,7 @@ input[type="range"]::-webkit-slider-thumb {
   border-radius: 50%;
   background: var(--orange);
   cursor: pointer;
-  box-shadow: 0 1px 4px rgba(232, 71, 10, 0.35);
+  box-shadow: 0 1px 4px rgba(24, 62, 52, 0.35);
 }
 
 /* Marquee */
@@ -94,8 +95,7 @@ input[type="range"]::-webkit-slider-thumb {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
-.marquee-track { animation: marquee 34s linear infinite; }
-.marquee-wrap:hover .marquee-track { animation-play-state: paused; }
+.marquee-track { animation: marquee 40s linear infinite; }
 
 /* Letter pulse */
 @keyframes lpulse {

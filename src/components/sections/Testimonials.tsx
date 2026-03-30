@@ -59,8 +59,8 @@ export default function Testimonials() {
           {["Zero New Hires Required", "Ready in Under Two Weeks", "No Per-Meal Fees"].map((t) => (
             <div key={t} className="flex items-center gap-2 text-[15px] text-[#71717A]">
               <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
-                <circle cx="10" cy="10" r="8" stroke="#E8470A" strokeWidth="1.5" />
-                <path d="M6.5 10l2.5 2.5 4.5-4.5" stroke="#E8470A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                <circle cx="10" cy="10" r="8" stroke="#183E34" strokeWidth="1.5" />
+                <path d="M6.5 10l2.5 2.5 4.5-4.5" stroke="#183E34" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
               {t}
             </div>
@@ -74,7 +74,7 @@ export default function Testimonials() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-40px" }}
         transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}
-        className="bg-[#E8470A] rounded-[20px] overflow-hidden"
+        className="bg-[#183E34] rounded-[20px] overflow-hidden"
       >
         {/* Logo bar */}
         <div className="px-10 py-4 flex items-center gap-8 border-b border-white/15 overflow-x-auto">
@@ -122,15 +122,15 @@ export default function Testimonials() {
               {/* Content */}
               <div className="bg-white p-10 flex flex-col justify-between">
                 <div>
-                  <p className="text-[19px] font-semibold leading-[1.55] tracking-[-0.02em] text-[#18181B] mb-3">
+                  <p className="text-[19px] font-semibold leading-[1.55] tracking-[-0.02em] text-[#1A1A1A] mb-3">
                     "{slides[current].quote}"
                   </p>
                   <p className="text-[13px] text-[#71717A]">{slides[current].author}</p>
                 </div>
                 <div className="bg-[#EDEBE6] rounded-xl px-4 py-3.5 mt-6 flex items-center gap-3">
-                  <TrendingUp size={18} className="text-[#E8470A] shrink-0" />
+                  <TrendingUp size={18} className="text-[#1A1A1A] shrink-0" />
                   <div>
-                    <div className="text-[22px] font-black text-[#18181B]">{slides[current].statVal}</div>
+                    <div className="text-[22px] font-black text-[#1A1A1A]">{slides[current].statVal}</div>
                     <div className="text-[12px] text-[#71717A]">{slides[current].statLabel}</div>
                   </div>
                 </div>

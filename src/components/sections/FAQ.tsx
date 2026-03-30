@@ -53,7 +53,7 @@ export default function FAQ() {
           >
             <button
               onClick={() => setOpen(open === i ? null : i)}
-              className="w-full flex items-center justify-between py-5 text-left text-[16px] font-medium text-[#18181B] gap-5 cursor-pointer bg-transparent border-none hover:text-[#E8470A] transition-colors"
+              className="w-full flex items-center justify-between py-5 text-left text-[16px] font-medium text-[#1A1A1A] gap-5 cursor-pointer bg-transparent border-none hover:text-[#1A1A1A] transition-colors"
             >
               {faq.q}
               <motion.span

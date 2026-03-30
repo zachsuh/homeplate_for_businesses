@@ -16,7 +16,7 @@ export default function AnnouncementBar() {
           transition={{ duration: 0.35, ease: "easeInOut" }}
           style={{ overflow: "hidden" }}
         >
-          <div className="bg-[#E8470A] text-white text-center px-5 py-2.5 text-[13.5px] font-medium flex items-center justify-center gap-2 relative">
+          <div className="bg-[#183E34] text-white text-center px-5 py-2.5 text-[13.5px] font-medium flex items-center justify-center gap-2 relative">
             <span>
               🏥 HomePlate is now accepting senior center kitchen partners — limited spots available
             </span>

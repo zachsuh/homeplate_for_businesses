@@ -31,9 +31,9 @@ export default function Footer() {
       <div className="grid grid-cols-[1fr_repeat(3,auto)] gap-14 mb-12">
         {/* Brand */}
         <div>
-          <div className="flex items-center gap-2.5 font-black text-[18px] text-[#E8470A] tracking-[-0.04em] mb-2.5">
+          <div className="flex items-center gap-2.5 font-black text-[18px] text-[#1A1A1A] tracking-[-0.04em] mb-2.5">
             <svg width="24" height="24" viewBox="0 0 32 32" fill="none">
-              <path d="M4 8L28 8L28 22L16 30L4 22Z" fill="#E8470A"/>
+              <path d="M4 8L28 8L28 22L16 30L4 22Z" fill="#183E34"/>
               <path d="M8 10L24 10L24 21L16 27L8 21Z" fill="white" fillOpacity="0.25"/>
               <rect x="13" y="13" width="6" height="5" rx="1" fill="white" fillOpacity="0.65"/>
             </svg>
@@ -49,9 +49,9 @@ export default function Footer() {
               placeholder="Your email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="border border-[#E4E2DE] rounded-lg px-3.5 py-2 text-[13px] font-[inherit] outline-none w-[190px] bg-[#EDEBE6] text-[#18181B] placeholder:text-[#71717A] focus:border-[#E8470A] transition-colors"
+              className="border border-[#E4E2DE] rounded-lg px-3.5 py-2 text-[13px] font-[inherit] outline-none w-[190px] bg-[#EDEBE6] text-[#1A1A1A] placeholder:text-[#71717A] focus:border-[#183E34] transition-colors"
             />
-            <button className="bg-[#E8470A] text-white border-none rounded-lg px-4 py-2 text-[13px] font-semibold cursor-pointer hover:bg-[#C73D08] transition-colors">
+            <button className="bg-[#183E34] text-white border-none rounded-lg px-4 py-2 text-[13px] font-semibold cursor-pointer hover:bg-[#122D26] transition-colors">
               Subscribe
             </button>
           </div>
@@ -67,7 +67,7 @@ export default function Footer() {
               <a
                 key={label}
                 href={href}
-                className="block text-[14px] text-[#3F3F46] no-underline mb-2.5 hover:text-[#E8470A] transition-colors"
+                className="block text-[14px] text-[#3F3F46] no-underline mb-2.5 hover:text-[#1A1A1A] transition-colors"
               >
                 {label}
               </a>
@@ -79,7 +79,7 @@ export default function Footer() {
       {/* Bottom */}
       <div className="flex items-end justify-between pt-6 border-t border-[#E4E2DE]">
         <div className="text-[13px] text-[#71717A] leading-[1.9]">
-          <strong className="font-semibold text-[#18181B]">Help Center</strong><br />
+          <strong className="font-semibold text-[#1A1A1A]">Help Center</strong><br />
           +1 (800) 555-HOME<br />
           hello@homeplate.com
         </div>
@@ -93,7 +93,7 @@ export default function Footer() {
             <motion.a
               key={label}
               href="#"
-              whileHover={{ scale: 1.1, borderColor: "#E8470A", color: "#E8470A" }}
+              whileHover={{ scale: 1.1, borderColor: "#183E34", color: "#183E34" }}
               aria-label={label}
               className="w-[34px] h-[34px] rounded-lg border border-[#E4E2DE] flex items-center justify-center text-[#71717A] no-underline transition-colors"
             >

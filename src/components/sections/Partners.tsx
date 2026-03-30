@@ -30,7 +30,7 @@ export default function Partners() {
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.97 }}
           onClick={() => document.getElementById("apply")?.scrollIntoView({ behavior: "smooth" })}
-          className="inline-flex items-center gap-2 bg-[#18181B] text-white px-5 py-2.5 rounded-xl text-[14px] font-semibold cursor-pointer border-none hover:opacity-85 transition-opacity"
+          className="inline-flex items-center gap-2 bg-[#183E34] text-white px-5 py-2.5 rounded-xl text-[14px] font-semibold cursor-pointer border-none hover:opacity-85 transition-opacity"
         >
           Become a Partner <ArrowRight size={14} />
         </motion.button>
@@ -48,7 +48,7 @@ export default function Partners() {
             className="bg-white border border-[#E4E2DE] rounded-2xl p-6 cursor-default transition-shadow"
           >
             <div className="text-[#71717A] mb-4">{f.icon}</div>
-            <h3 className="text-[15px] font-semibold text-[#18181B] mb-1 leading-[1.4]">{f.title}</h3>
+            <h3 className="text-[15px] font-semibold text-[#1A1A1A] mb-1 leading-[1.4]">{f.title}</h3>
             <p className="text-[13px] text-[#71717A] leading-[1.57]">{f.desc}</p>
           </motion.div>
         ))}

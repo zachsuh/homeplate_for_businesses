@@ -18,7 +18,7 @@ export default function PilotStories() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-60px" }}
         transition={{ duration: 0.7, ease: "easeOut" }}
-        className="bg-[#E8470A] rounded-[20px] overflow-hidden p-12 grid grid-cols-[280px_1fr] gap-10 min-h-[240px] relative"
+        className="bg-[#183E34] rounded-[20px] overflow-hidden p-12 grid grid-cols-[280px_1fr] gap-10 min-h-[240px] relative"
       >
         {/* Text */}
         <div className="relative z-10">

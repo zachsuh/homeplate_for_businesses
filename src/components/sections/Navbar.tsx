@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, ArrowRight, Users, BookOpen, Mic, Layers, Compass, Building2, Menu, X } from "lucide-react";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 const dropdowns: Record<string, { icon: React.ReactNode; label: string; href: string }[]> = {
@@ -46,13 +47,15 @@ export default function Navbar() {
       <div className="max-w-[1280px] mx-auto px-8 h-16 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center gap-8">
-          <a href="#" className="flex items-center gap-2.5 font-black text-[19px] tracking-[-0.04em] text-[#E8470A] no-underline">
-            <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
-              <path d="M4 8L28 8L28 22L16 30L4 22Z" fill="#E8470A" />
-              <path d="M8 10L24 10L24 21L16 27L8 21Z" fill="white" fillOpacity="0.25" />
-              <rect x="13" y="13" width="6" height="5" rx="1" fill="white" fillOpacity="0.65" />
-            </svg>
-            HomePlate
+          <a href="#" className="flex items-center no-underline">
+            <Image
+              src="/images/homeplate-logo.png"
+              alt="HomePlate"
+              width={160}
+              height={40}
+              style={{ height: 36, width: "auto" }}
+              priority
+            />
           </a>
 
           {/* Desktop nav */}
@@ -84,9 +87,9 @@ export default function Navbar() {
                         <a
                           key={item.label}
                           href={item.href}
-                          className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-[14px] text-[#18181B] hover:bg-[#EDEBE6] transition-colors no-underline"
+                          className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-[14px] text-[#1A1A1A] hover:bg-[#EDEBE6] transition-colors no-underline"
                         >
-                          <div className="w-8 h-8 bg-[#EDEBE6] rounded-lg flex items-center justify-center shrink-0 text-[#E8470A]">
+                          <div className="w-8 h-8 bg-[#EDEBE6] rounded-lg flex items-center justify-center shrink-0 text-[#1A1A1A]">
                             {item.icon}
                           </div>
                           {item.label}
@@ -117,7 +120,7 @@ export default function Navbar() {
             href="#apply"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            className="flex items-center gap-2 bg-[#E8470A] text-white px-4 py-2 rounded-xl text-[14px] font-semibold no-underline transition-colors hover:bg-[#C73D08]"
+            className="flex items-center gap-2 bg-[#183E34] text-white px-4 py-2 rounded-xl text-[14px] font-semibold no-underline transition-colors hover:bg-[#122D26]"
           >
             Get Free Demo
             <ArrowRight size={14} />
