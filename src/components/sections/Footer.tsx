@@ -121,7 +121,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="pt-6 border-t border-[#E4E2DE]">
           <p className="text-[12.5px] text-[#71717A]">
-            © 2025 Hearthwise LLC. All Rights Reserved.
+            © 2025 HomePlate Health, Inc. All Rights Reserved.
           </p>
         </div>
       </div>

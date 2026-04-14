@@ -52,7 +52,7 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.15, ease: "easeOut" }}
           className="text-[17px] text-[#52525B] max-w-[520px] mx-auto mb-7 leading-[1.65]"
         >
-          Break into the at-home care industry. HomePlate gives senior centers the software, systems, and support to launch their own medically tailored meal delivery program — no new infrastructure required.
+          Break into the at-home care industry. HomePlate gives senior centers the software, systems, and support to launch their own medically tailored meal delivery program, no new infrastructure required.
         </motion.p>
 
         {/* CTA */}
